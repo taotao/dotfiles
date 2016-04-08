@@ -1,0 +1,5 @@
+#
+# We can add the header file directories that we want to include.
+# Remove '#' and filename of '.template' to let the config be applied.
+#
+# -I/include/path
