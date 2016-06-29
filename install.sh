@@ -18,5 +18,11 @@ cp editorconfig/.editorconfig ${HOME}/.editorconfig
 # Update .gitconfig
 cp git/.gitconfig ${HOME}/.gitconfig
 
+# Update git user.name & user.email
+read -p "Enter git [user.name]: " git_user_name
+git config --global user.name $git_user_name
+read -p "Enter git [user.email]: " git_user_email
+git config --global user.email $git_user_email
+
 # Update .gitignore
 cp git/.gitignore ${HOME}/.gitignore
