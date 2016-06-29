@@ -76,7 +76,4 @@ let g:ctrlp_user_command = {
 		\ },
 	\ 'fallback': 'find %s -type f'
 	\ }
-
-" Ctrl+B to show MostRecentUpdate files
-nnoremap <C-b> :CtrlPMRU<CR>
 " ------------------------------------------
