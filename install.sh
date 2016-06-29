@@ -29,3 +29,6 @@ cp git/.gitignore ${HOME}/.gitignore
 
 # Prepare for Geeknote
 mkdir -p ${HOME}/.geeknote/tmp
+
+# Update .tmux.conf
+cp tmux/.tmux.conf ${HOME}/.tmux.conf
