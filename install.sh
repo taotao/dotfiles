@@ -26,3 +26,6 @@ git config --global user.email $git_user_email
 
 # Update .gitignore
 cp git/.gitignore ${HOME}/.gitignore
+
+# Prepare for Geeknote
+mkdir -p ${HOME}/.geeknote/tmp
