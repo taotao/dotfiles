@@ -28,6 +28,7 @@ Plug 'scrooloose/syntastic'
 Plug 'aceofall/gtags.vim'
 Plug 'taglist.vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plugin 'neilagabriel/vim-geeknote'
 
 call plug#end()
 " ------------------------------------------
@@ -80,4 +81,10 @@ let g:ctrlp_user_command = {
 		\ },
 	\ 'fallback': 'find %s -type f'
 	\ }
+" ------------------------------------------
+
+" ------------------------------------------
+" vim-geeknote
+
+let g:GeeknoteFormat="markdown"
 " ------------------------------------------
