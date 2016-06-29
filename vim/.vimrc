@@ -7,29 +7,25 @@ set autoindent
 set smartindent
 
 " ------------------------------------------
-" Vendle
-set nocompatible  " be iMproved, required
-filetype off      " required
+" vim-plug
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" automatic installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'aceofall/gtags.vim'
-Plugin 'taglist.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'aceofall/gtags.vim'
+Plug 'taglist.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end() " required
-filetype plugin indent on " required
+call plug#end()
 " ------------------------------------------
 
 " ------------------------------------------
