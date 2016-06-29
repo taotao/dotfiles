@@ -65,6 +65,7 @@ let GtagsCscope_Quiet = 1
 " syntastic
 let g:syntastic_c_check_header = 1
 let g:syntastic_cpp_check_header = 1
+let g:syntastic_python_checkers = ['flake8']
 " ------------------------------------------
 
 " ------------------------------------------
