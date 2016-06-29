@@ -6,6 +6,10 @@ set background=dark
 set autoindent
 set smartindent
 
+if has("macunix")
+  set backspace=indent,eol,start " for MAC del key
+endif
+
 " ------------------------------------------
 " vim-plug
 
