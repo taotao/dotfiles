@@ -33,3 +33,8 @@ cp tmux/.tmux.conf ${HOME}/.tmux.conf
 
 # Update .flake8
 cp flake8/.flake8 ${HOME}/.flake8
+
+# Update bash
+cp bash/.bash_prompt ${HOME}/.bash_prompt
+echo '[[ -f "$HOME/.bash_prompt" ]] && source "$HOME/.bash_prompt"' >> ${HOME}/.bashrc
+echo "PROMPT_COMMAND='echo -ne \"\033]0;\007\"'" >> ${HOME}/.bashrc
