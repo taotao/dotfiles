@@ -5,6 +5,7 @@ set ruler
 set background=dark
 set autoindent
 set smartindent
+set mouse=
 
 if has("macunix")
   set backspace=indent,eol,start " for MAC del key
@@ -25,10 +26,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'aceofall/gtags.vim'
-Plug 'taglist.vim'
+Plug 'vim-scripts/taglist.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plugin 'neilagabriel/vim-geeknote'
+Plug 'rust-lang/rust.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 " ------------------------------------------
@@ -36,11 +38,11 @@ call plug#end()
 " ------------------------------------------
 " NERDTree
 
-" Ctrl + Shift + o to open nerdtree
-nnoremap <C-S-o> :NERDTreeToggle<CR>
-
 " NERDTree at the right side
 let g:NERDTreeWinPos = "right"
+
+" NERDTree Ignore file
+let g:NERDTreeIgnore = ['\.o']
 " ------------------------------------------
 
 " ------------------------------------------
@@ -49,23 +51,13 @@ nnoremap <F8> :TlistToggle<CR>
 " ------------------------------------------
 
 " ------------------------------------------
-" cscope
-set cscopetag                  " use cscope for tags
-set cscopeprg='gtags-cscope'   " use gtags-cscope instead of cscope
-" ------------------------------------------
-
-" ------------------------------------------
-" gtags
-let GtagsCscope_Auto_Load = 1
-let CtagsCscope_Auto_Map = 1
-let GtagsCscope_Quiet = 1
-" ------------------------------------------
-
-" ------------------------------------------
 " syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_c_check_header = 1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_rust_checkers = ['rustc']
 " ------------------------------------------
 
 " ------------------------------------------
@@ -85,7 +77,7 @@ let g:ctrlp_user_command = {
 " ------------------------------------------
 
 " ------------------------------------------
-" vim-geeknote
+"  rust.vim
 
-let g:GeeknoteFormat="markdown"
-" ------------------------------------------
+let g:rustfmt_autosave = 1
+"  -----------------------------------------
