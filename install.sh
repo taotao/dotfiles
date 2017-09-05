@@ -30,3 +30,6 @@ cp git/.gitignore ${HOME}/.gitignore
 
 # Update .tmux.conf
 cp tmux/.tmux.conf ${HOME}/.tmux.conf
+
+# Update .flake8
+cp flake8/.flake8 ${HOME}/.flake8
